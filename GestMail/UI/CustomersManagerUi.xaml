@@ -6,18 +6,18 @@
              mc:Ignorable="d" 
              d:DesignHeight="433" d:DesignWidth="820">
     <Grid>
-        <TextBox Height="23" HorizontalAlignment="Left" Margin="256,24,0,0" Name="TbCode" VerticalAlignment="Top" Width="73" KeyDown="TbId_KeyDown" IsEnabled="True" MaxLength="6" />
-        <TextBox Height="23" HorizontalAlignment="Left" Margin="256,54,0,0" Name="TbName" VerticalAlignment="Top" Width="207" MaxLength="50" />
-        <TextBox Height="23" HorizontalAlignment="Left" Margin="256,84,0,0" Name="TbEmail1" VerticalAlignment="Top" Width="207" MaxLength="40" />
-        <TextBox Height="23" HorizontalAlignment="Left" Margin="256,113,0,0" Name="TbEmail2" VerticalAlignment="Top" Width="207" MaxLength="40" />
-        <TextBox Height="23" HorizontalAlignment="Left" Margin="256,141,0,0" Name="TbEmail3" VerticalAlignment="Top" Width="207" MaxLength="40" />
-        <Label Content="Codigo" Height="28" HorizontalAlignment="Left" Margin="196,28,0,0" Name="LblId" VerticalAlignment="Top" />
-        <Label Content="Nombre" Height="28" HorizontalAlignment="Left" Margin="196,56,0,0" Name="LblNombre" VerticalAlignment="Top" />
-        <Label Content="Email 1" Height="28" HorizontalAlignment="Left" Margin="196,84,0,0" Name="LblEmail1" VerticalAlignment="Top" />
-        <Label Content="Email 2" Height="28" HorizontalAlignment="Left" Margin="196,112,0,0" Name="LblEmail2" VerticalAlignment="Top" />
-        <Label Content="Email 3" Height="28" HorizontalAlignment="Left" Margin="196,141,0,0" Name="LblEmail3" VerticalAlignment="Top" RenderTransformOrigin="0.522,1.929" />
+        <TextBox Height="27" HorizontalAlignment="Left" Margin="256,24,0,0" Name="TbCode" VerticalAlignment="Top" Width="85" KeyDown="TbId_KeyDown" IsEnabled="True" MaxLength="6" />
+        <TextBox Height="27" HorizontalAlignment="Left" Margin="256,54,0,0" Name="TbName" VerticalAlignment="Top" Width="207" MaxLength="50" />
+        <TextBox Height="27" HorizontalAlignment="Left" Margin="256,84,0,0" Name="TbEmail1" VerticalAlignment="Top" Width="207" MaxLength="40" />
+        <TextBox Height="27" HorizontalAlignment="Left" Margin="256,113,0,0" Name="TbEmail2" VerticalAlignment="Top" Width="207" MaxLength="40" />
+        <TextBox Height="27" HorizontalAlignment="Left" Margin="256,141,0,0" Name="TbEmail3" VerticalAlignment="Top" Width="207" MaxLength="40" />
+        <Label Content="Codigo" Height="28" HorizontalAlignment="Left" Margin="196,23,0,0" Name="LblId" VerticalAlignment="Top" />
+        <Label Content="Nombre" Height="28" HorizontalAlignment="Left" Margin="196,53,0,0" Name="LblNombre" VerticalAlignment="Top" RenderTransformOrigin="0.306,1.238" />
+        <Label Content="Email 1" Height="28" HorizontalAlignment="Left" Margin="196,83,0,0" Name="LblEmail1" VerticalAlignment="Top" RenderTransformOrigin="0.517,0.095" />
+        <Label Content="Email 2" Height="28" HorizontalAlignment="Left" Margin="196,116,0,0" Name="LblEmail2" VerticalAlignment="Top" RenderTransformOrigin="0.496,0.115" />
+        <Label Content="Email 3" Height="28" HorizontalAlignment="Left" Margin="196,151,0,0" Name="LblEmail3" VerticalAlignment="Top" RenderTransformOrigin="0.522,1.929" />
         <Button Content="Eliminar" Height="27" HorizontalAlignment="Left" Margin="504,113,0,0" Name="BtnDelete" VerticalAlignment="Top" Width="110" Click="BtnDelete_Click" FontSize="12" />
-        <Button Content="Guardar" Height="27" HorizontalAlignment="Left" Margin="504,145,0,0" Name="BtnSave" VerticalAlignment="Top" Width="110" Click="BtnSave_Click" FontSize="12" />
+        <Button Content="Guardar" Height="27" HorizontalAlignment="Left" Margin="504,147,0,0" Name="BtnSave" VerticalAlignment="Top" Width="110" Click="BtnSave_Click" FontSize="12" RenderTransformOrigin="0.472,1.419" />
         <Button Content="Nuevo" Height="27" HorizontalAlignment="Left" Margin="504,80,0,0" Name="BtnCreate" VerticalAlignment="Top" Width="110" Click="BtnCreate_Click" FontSize="12" />
         <ListView  Height="268" HorizontalAlignment="Left" Margin="33,212,0,0" Name="LvCustomers" VerticalAlignment="Top" Width="775" MouseDoubleClick="LvCustomers_MouseDoubleClick" FontSize="11">
             <ListView.View>
@@ -30,8 +30,8 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <Label Content="" Height="28" HorizontalAlignment="Left" Margin="196,170,0,0" Name="LblInfo" VerticalAlignment="Top" Width="418" />
-       
+        <Label Content="" Height="28" HorizontalAlignment="Left" Margin="196,183,0,0" Name="LblInfo" VerticalAlignment="Top" Width="290" RenderTransformOrigin="0.517,-0.228" />
+
         <Button Content="Buscar" Height="27" HorizontalAlignment="Left" Margin="504,47,0,0" x:Name="BtnSearch" VerticalAlignment="Top" Width="110" Click="BtnSearch_Click" FontSize="12" />
     </Grid>
 </UserControl>

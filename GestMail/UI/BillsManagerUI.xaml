@@ -10,12 +10,12 @@
             <ColumnDefinition Width="337*" />
             <ColumnDefinition Width="483*" />
         </Grid.ColumnDefinitions>
-        <TextBox Height="23" HorizontalAlignment="Left" Margin="303,34,0,0" Name="TbSerie" VerticalAlignment="Top" Width="45" MaxLength="4" Grid.ColumnSpan="2" />
-        <TextBox Height="23" HorizontalAlignment="Left" Margin="23,34,0,0" Name="TbNumber" VerticalAlignment="Top" Width="127" MaxLength="15" Grid.Column="1" />
-        <TextBox Height="23" HorizontalAlignment="Right" Margin="0,34,250,0" Name="TbYear" VerticalAlignment="Top" Width="63" KeyDown="TbYear_KeyDown" MaxLength="4" IsEnabled="True" Grid.Column="1" />
+        <TextBox Height="27" HorizontalAlignment="Left" Margin="303,34,0,0" Name="TbSerie" VerticalAlignment="Top" Width="45" MaxLength="4" Grid.ColumnSpan="2" />
+        <TextBox Height="27" HorizontalAlignment="Left" Margin="23,34,0,0" Name="TbNumber" VerticalAlignment="Top" Width="127" MaxLength="15" Grid.Column="1" />
+        <TextBox Height="27" HorizontalAlignment="Right" Margin="0,34,250,0" Name="TbYear" VerticalAlignment="Top" Width="63" KeyDown="TbYear_KeyDown" MaxLength="4" IsEnabled="True" Grid.Column="1" />
         <Label Content="Factura" Height="28" HorizontalAlignment="Left" Margin="205,30,0,0" Name="LblBill" VerticalAlignment="Top" />
-        <Label Content="Código cliente" Height="28" HorizontalAlignment="Left" Margin="205,67,0,0" Name="LblCustomerCode" VerticalAlignment="Top" />
-        <TextBox Height="23" HorizontalAlignment="Left" Margin="303,72,0,0" Name="TbCustomerCode" VerticalAlignment="Top" Width="70" MaxLength="6" Grid.ColumnSpan="2" />
+        <Label Content="Código cliente" Height="28" HorizontalAlignment="Left" Margin="205,71,0,0" Name="LblCustomerCode" VerticalAlignment="Top" />
+        <TextBox Height="27" HorizontalAlignment="Left" Margin="303,72,0,0" Name="TbCustomerCode" VerticalAlignment="Top" Width="70" MaxLength="6" Grid.ColumnSpan="2" />
         <CheckBox Content="Pendientes" Height="16" HorizontalAlignment="Left" Margin="209,128,0,0" Name="ChkPending" VerticalAlignment="Top" Checked="ChkPending_Checked" />
         <CheckBox Content="Enviadas" Height="16" HorizontalAlignment="Left" Margin="5,128,0,0" Name="ChkSent" VerticalAlignment="Top" Checked="ChkSent_Checked" Grid.Column="1" />
         <ListView Height="268" HorizontalAlignment="Left" Margin="32,212,0,0" Name="LvFacturas" VerticalAlignment="Top" Width="774" Grid.ColumnSpan="2" MouseDoubleClick="LvFacturas_MouseDoubleClick" FontSize="11">

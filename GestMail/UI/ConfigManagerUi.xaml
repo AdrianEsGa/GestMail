@@ -8,10 +8,10 @@
         <StackPanel>
 
         </StackPanel>
-        <TextBox Height="23" HorizontalAlignment="Left" Margin="175,22,0,0" Name="TbDataBase" VerticalAlignment="Top" Width="230" IsEnabled="False" />
+        <TextBox Height="27" HorizontalAlignment="Left" Margin="175,21,0,0" Name="TbDataBase" VerticalAlignment="Top" Width="230" IsEnabled="False" />
         <TextBox Height="27" HorizontalAlignment="Left" Margin="565,27,0,0" Name="TbEmail" VerticalAlignment="Top" Width="204" MaxLength="40" />
         <PasswordBox PasswordChar="*" Height="27" HorizontalAlignment="Left" Margin="565,59,0,0" Name="TbPassWord" VerticalAlignment="Top" Width="204" Password="sdfdsfd" OpacityMask="#FF004E00" Opacity="0.7" MaxLength="20" />
-        <Label Content="Base Datos" Height="28" HorizontalAlignment="Left" Margin="47,21,0,0" Name="LblDataBase" VerticalAlignment="Top" />
+        <Label Content="Base Datos" Height="28" HorizontalAlignment="Left" Margin="47,31,0,0" Name="LblDataBase" VerticalAlignment="Top" />
         <Label Content="eMail" Height="28" HorizontalAlignment="Left" Margin="460,22,0,0" Name="LblEmail" VerticalAlignment="Top" />
         <Label  Content="Contraseña" Height="28" HorizontalAlignment="Left" Margin="460,52,0,0" Name="LblPassWord" VerticalAlignment="Top" />
         <Label Content="Servidor" Height="28" HorizontalAlignment="Left" Margin="460,87,0,0" x:Name="LblEmailServer" VerticalAlignment="Top" />
@@ -27,22 +27,22 @@
             </ListView.View>
         </ListView>
         <Button Content="Ver" Height="27" HorizontalAlignment="Left" Margin="530,438,0,0" Name="BtnVerHistorial" VerticalAlignment="Top" Width="105" Click="BtnViewHistorial_Click" FontSize="12" />
-        <TextBox Height="23" HorizontalAlignment="Left" Margin="175,51,0,0" Name="TbPathPendingBills" VerticalAlignment="Top" Width="230" IsReadOnly="False" IsEnabled="False" />
-        <Label Content="Facturas Pendientes" Height="28" HorizontalAlignment="Left" Margin="47,51,0,0" Name="LblPathPendingBills" VerticalAlignment="Top" />
+        <TextBox Height="27" HorizontalAlignment="Left" Margin="175,54,0,0" Name="TbPathPendingBills" VerticalAlignment="Top" Width="230" IsReadOnly="False" IsEnabled="False" />
+        <Label Content="Facturas Pendientes" Height="28" HorizontalAlignment="Left" Margin="47,59,0,0" Name="LblPathPendingBills" VerticalAlignment="Top" />
         <Button Content="Envio de prueba" Height="27" HorizontalAlignment="Left" Margin="540,173,0,0" Name="BtnTestEmail" VerticalAlignment="Top" Width="140" Click="BtnTestEmail_Click" OverridesDefaultStyle="False" FontSize="12" />
-        <TextBox Height="23" HorizontalAlignment="Left" IsEnabled="False" IsReadOnly="False" Margin="175,80,0,0" Name="TbPathSentBills" VerticalAlignment="Top" Width="230" />
-        <Label Content="Facturas Enviadas" Height="28" HorizontalAlignment="Left" Margin="47,80,0,0" Name="LblPathSentBills" VerticalAlignment="Top" />
-        <Label Content="Hora Envío" Height="28" HorizontalAlignment="Left" Margin="47,108,0,0" Name="LblShippingTime" VerticalAlignment="Top" />
-        <Label Content="Intervalos " Height="28" HorizontalAlignment="Left" Margin="47,135,0,0" Name="LblIntervalos" VerticalAlignment="Top" />
-        <TextBox HorizontalAlignment="Left" Margin="175,135,0,319" Name="TbShippingTime" Width="58" MaxLength="5" />
-        <TextBox Height="23" HorizontalAlignment="Left" Margin="175,103,0,0" Name="TbIntervalos" VerticalAlignment="Top" Width="58" MaxLength="3" KeyDown="TbIntervalos_KeyDown" />
-        <Label Content="hh:mm" Height="28" HorizontalAlignment="Left" Margin="239,108,0,0" Name="LblShippmentsTimeFormat" VerticalAlignment="Top" />
-        <Label Content="seg" Height="28" HorizontalAlignment="Right" Margin="0,135,553,0" Name="LblIntervalSeconds" VerticalAlignment="Top" />
+        <TextBox Height="27" HorizontalAlignment="Left" IsEnabled="False" IsReadOnly="False" Margin="175,84,0,0" Name="TbPathSentBills" VerticalAlignment="Top" Width="230" />
+        <Label Content="Facturas Enviadas" Height="28" HorizontalAlignment="Left" Margin="47,87,0,0" Name="LblPathSentBills" VerticalAlignment="Top" />
+        <Label Content="Hora Envío" Height="28" HorizontalAlignment="Left" Margin="47,118,0,0" Name="LblShippingTime" VerticalAlignment="Top" />
+        <Label Content="Intervalos " Height="28" HorizontalAlignment="Left" Margin="47,151,0,0" Name="LblIntervalos" VerticalAlignment="Top" />
+        <TextBox Height="27" HorizontalAlignment="Left" Margin="175,144,0,304" Name="TbShippingTime" Width="58" MaxLength="5" />
+        <TextBox Height="27" HorizontalAlignment="Left" Margin="175,112,0,0" Name="TbIntervalos" VerticalAlignment="Top" Width="58" MaxLength="3" KeyDown="TbIntervalos_KeyDown" />
+        <Label Content="hh:mm" Height="28" HorizontalAlignment="Left" Margin="239,117,0,0" Name="LblShippmentsTimeFormat" VerticalAlignment="Top" />
+        <Label Content="seg" Height="28" HorizontalAlignment="Right" Margin="0,145,555,0" Name="LblIntervalSeconds" VerticalAlignment="Top" RenderTransformOrigin="0.654,0.94" />
         <CheckBox Content="Errores" Height="16" HorizontalAlignment="Right" Margin="0,446,320,0" Name="ChkErrorsHistorial" VerticalAlignment="Top" />
         <Button Content="Reportar errores" Height="27" HorizontalAlignment="Right" Margin="0,438,23,0" Name="BtnReportErrors" VerticalAlignment="Top" Width="134" Click="BtnReportErrors_Click" FontSize="12" />
-        <Image Height="24" HorizontalAlignment="Left" Margin="410,22,0,0" Name="BtnSelectDataBase" Stretch="Fill" VerticalAlignment="Top" Width="22" MouseDown="BtnSelectDataBase_MouseDown" Source="/GestMail;component/Images/folder_32.png" />
-        <Image Height="23" HorizontalAlignment="Left" Margin="410,51,0,0" Name="BtnSelectPathPendingBills" Stretch="Fill" VerticalAlignment="Top" Width="22" MouseDown="BtnSelectPathPendingBills_MouseDown" Source="/GestMail;component/Images/folder_32.png" />
-        <Image Height="23" HorizontalAlignment="Left" Margin="410,0,0,372" Name="BtnSelectPathShippingBills" Stretch="Fill" VerticalAlignment="Bottom" Width="22" MouseDown="BtnSelectPathShippingBills_MouseDown" Source="/GestMail;component/Images/folder_32.png" />
+        <Image Height="23" HorizontalAlignment="Left" Margin="410,30,0,0" Name="BtnSelectDataBase" Stretch="Fill" VerticalAlignment="Top" Width="22" MouseDown="BtnSelectDataBase_MouseDown" Source="/GestMail;component/Images/folder_32.png" />
+        <Image Height="23" HorizontalAlignment="Left" Margin="410,62,0,0" Name="BtnSelectPathPendingBills" Stretch="Fill" VerticalAlignment="Top" Width="22" MouseDown="BtnSelectPathPendingBills_MouseDown" Source="/GestMail;component/Images/folder_32.png" />
+        <Image Height="23" HorizontalAlignment="Left" Margin="410,0,0,358" Name="BtnSelectPathShippingBills" Stretch="Fill" VerticalAlignment="Bottom" Width="22" MouseDown="BtnSelectPathShippingBills_MouseDown" Source="/GestMail;component/Images/folder_32.png" />
         <TextBox Height="27" HorizontalAlignment="Left" Margin="565,91,0,0" x:Name="TbEmailServer" VerticalAlignment="Top" Width="204" MaxLength="40" RenderTransformOrigin="0.486,3.29" />
         <TextBox Height="27" HorizontalAlignment="Left" Margin="565,123,0,0" x:Name="TbEmailServerPort" VerticalAlignment="Top" Width="84" MaxLength="40" RenderTransformOrigin="0.486,3.29" />
         <Label Content="Puerto" Height="28" HorizontalAlignment="Left" Margin="460,122,0,0" x:Name="LblEmailServerPort" VerticalAlignment="Top" />
