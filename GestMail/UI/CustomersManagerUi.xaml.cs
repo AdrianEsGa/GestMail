@@ -114,7 +114,7 @@ namespace GestMail.UI
                 e.Handled = true;
         }
 
-        private void BtnSearch_MouseDown(object sender, MouseButtonEventArgs e)
+        private void BtnSearch_Click(object sender, RoutedEventArgs e)
         {
             LvCustomers.Items.Clear();
             List<Customers> customers;
@@ -130,6 +130,5 @@ namespace GestMail.UI
                 LvCustomers.Items.Add(customer);
             }
         }
-
     }
 }

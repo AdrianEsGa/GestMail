@@ -5,56 +5,18 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
               d:DesignHeight="433" d:DesignWidth="820">
-    <Grid OpacityMask="#C1596259">
-        <Label Content="Clientes" Height="50" HorizontalAlignment="Left" Margin="131,200,0,0" Name="LblCreatedCustomersText" VerticalAlignment="Top" Width="185" FontSize="20" />
-        <Label Content="" Height="50" HorizontalAlignment="Left" Margin="421,200,0,0" Name="LblCreatedCustomersNumber" VerticalAlignment="Top" Width="131" FontSize="24" AllowDrop="True" />
-        <Label Content="Facturas pendientes" Height="51" HorizontalAlignment="Left" Margin="131,281,0,0" Name="LblPendingBillsText" VerticalAlignment="Top" Width="185" FontSize="20" />
-        <Label Content="" Height="51" HorizontalAlignment="Left" Margin="421,281,0,0" Name="LblPendingBillsNumber" VerticalAlignment="Top" Width="131" FontSize="24" />
-        <Label Content="Facturas enviadas" Height="50" HorizontalAlignment="Left" Margin="131,338,0,0" Name="LblSentBillsText" VerticalAlignment="Top" Width="185" FontSize="20" />
-        <Label Content="" FontSize="24" Height="51" HorizontalAlignment="Left" Margin="421,337,0,0" Name="LblSentBillsNumber" VerticalAlignment="Top" Width="131" />
+    <Grid >
+        <Label Content="Clientes" Height="50" HorizontalAlignment="Left" Margin="205,200,0,0" Name="LblCreatedCustomersText" VerticalAlignment="Top" Width="185" FontSize="20" />
+        <Label Content="" Height="50" HorizontalAlignment="Left" Margin="495,200,0,0" Name="LblCreatedCustomersNumber" VerticalAlignment="Top" Width="131" FontSize="24" AllowDrop="True" />
+        <Label Content="Facturas pendientes" Height="51" HorizontalAlignment="Left" Margin="205,281,0,0" Name="LblPendingBillsText" VerticalAlignment="Top" Width="185" FontSize="20" />
+        <Label Content="" Height="51" HorizontalAlignment="Left" Margin="495,281,0,0" Name="LblPendingBillsNumber" VerticalAlignment="Top" Width="131" FontSize="24" />
+        <Label Content="Facturas enviadas" Height="50" HorizontalAlignment="Left" Margin="205,338,0,0" Name="LblSentBillsText" VerticalAlignment="Top" Width="185" FontSize="20" />
+        <Label Content="" FontSize="24" Height="51" HorizontalAlignment="Left" Margin="495,337,0,0" Name="LblSentBillsNumber" VerticalAlignment="Top" Width="131" />
+        <Label Content="Hora envío" FontSize="20" Height="50" HorizontalAlignment="Left" Margin="200,29,0,0" Name="LblShippingTimeText" VerticalAlignment="Top" Width="113" />
+        <Label AllowDrop="True" Content="" FontSize="26" Height="50" HorizontalAlignment="Left" Margin="341,29,0,0" Name="LblShippingTimeNumber" VerticalAlignment="Top" Width="119" />
+        <Label AllowDrop="True" Content="" FontSize="26" Height="50" HorizontalAlignment="Left" Margin="495,29,0,0" Name="LblRestantTime" VerticalAlignment="Top" Width="157" />
+        <Label Content="Último envio" FontSize="20" Height="50" HorizontalAlignment="Left" Margin="200,105,0,0" Name="LvlStatusLastShippingText" VerticalAlignment="Top" Width="150" />
+        <Label AllowDrop="True" Content="" FontSize="26" Height="50" HorizontalAlignment="Left" Margin="495,105,0,0" Name="LblStatusLastShippingValue" VerticalAlignment="Top" Width="119" />
 
-
-
-        <Rectangle Height="73" HorizontalAlignment="Left" Margin="116,189,0,0" Name="rectangle1" Stroke="#3A0000FF" VerticalAlignment="Top" Width="507">
-            <Rectangle.Fill>
-                <LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
-                    <GradientStop Color="#000000FF" Offset="0" />
-                    <GradientStop Color="#6FC7C7C7" Offset="1" />
-                    <GradientStop Color="White" Offset="1" />
-                </LinearGradientBrush>
-            </Rectangle.Fill>
-        </Rectangle>
-        <Rectangle Height="131" HorizontalAlignment="Left" Margin="116,268,0,0" Name="rectangle2" Stroke="#3A002AFC" VerticalAlignment="Top" Width="507">
-            <Rectangle.Fill>
-                <LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
-                    <GradientStop Color="#000000FF" Offset="0" />
-                    <GradientStop Color="#6FC7C7C7" Offset="1" />
-                    <GradientStop Color="White" Offset="1" />
-                </LinearGradientBrush>
-            </Rectangle.Fill>
-        </Rectangle>
-        <Label Content="Hora envío" FontSize="20" Height="50" HorizontalAlignment="Left" Margin="126,29,0,0" Name="LblShippingTimeText" VerticalAlignment="Top" Width="113" />
-        <Label AllowDrop="True" Content="" FontSize="26" Height="50" HorizontalAlignment="Left" Margin="267,29,0,0" Name="LblShippingTimeNumber" VerticalAlignment="Top" Width="119" />
-        <Rectangle Height="70" HorizontalAlignment="Left" Margin="116,19,0,0" Name="rectangle3" Stroke="#3A0000FF" VerticalAlignment="Top" Width="507">
-            <Rectangle.Fill>
-                <LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
-                    <GradientStop Color="#000000FF" Offset="0" />
-                    <GradientStop Color="#6FC7C7C7" Offset="1" />
-                    <GradientStop Color="White" Offset="1" />
-                </LinearGradientBrush>
-            </Rectangle.Fill>
-        </Rectangle>
-        <Label AllowDrop="True" Content="" FontSize="26" Height="50" HorizontalAlignment="Left" Margin="421,29,0,0" Name="LblRestantTime" VerticalAlignment="Top" Width="157" />
-        <Label Content="Último envio" FontSize="20" Height="50" HorizontalAlignment="Left" Margin="126,105,0,0" Name="LvlStatusLastShippingText" VerticalAlignment="Top" Width="150" />
-        <Label AllowDrop="True" Content="" FontSize="26" Height="50" HorizontalAlignment="Left" Margin="421,105,0,0" Name="LblStatusLastShippingValue" VerticalAlignment="Top" Width="119" />
-        <Rectangle Height="70" HorizontalAlignment="Left" Margin="116,95,0,0" Name="rectangle4" Stroke="#3A0000FF" VerticalAlignment="Top" Width="507">
-            <Rectangle.Fill>
-                <LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
-                    <GradientStop Color="#000000FF" Offset="0" />
-                    <GradientStop Color="#6FC7C7C7" Offset="1" />
-                    <GradientStop Color="White" Offset="1" />
-                </LinearGradientBrush>
-            </Rectangle.Fill>
-        </Rectangle>
     </Grid>
 </UserControl>

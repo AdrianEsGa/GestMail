@@ -64,7 +64,7 @@ namespace GestMail.UI
                 e.Handled = true;
         }
 
-        private void BtnSearch_MouseDown(object sender, MouseButtonEventArgs e)
+        private void BtnSearch_Click(object sender, RoutedEventArgs e)
         {
             Customers customer = null;
             LvShipping.ItemsSource = null;
@@ -88,7 +88,5 @@ namespace GestMail.UI
                         .DefaultView;
             }
         }
-
- 
     }
 }

@@ -25,18 +25,7 @@ namespace GestMail.UI
 
         private void BtnViewHistorial_Click(object sender, RoutedEventArgs e)
         {
-            LvHistorial.ItemsSource = null;
-
-
-            if (ChkErrorsHistorial.IsChecked != null && ChkErrorsHistorial.IsChecked.Value)
-            {
-                LvHistorial.ItemsSource = Log.GetErrors().DefaultView;
-                return;
-            }
-
-            LvHistorial.ItemsSource = Log.Get().DefaultView;
-
-
+            LoadHistory();
         }
 
         private void BtnSave_Click(object sender, RoutedEventArgs e)
@@ -93,6 +82,8 @@ namespace GestMail.UI
             TbEmailServerPort.Text = _config.EmailSeverPort.ToString();
             TbShippingTime.Text = _config.ShippingTime;
             TbIntervalos.Text = _config.ShippingInterval;
+
+            LoadHistory();
         }
 
         private void BtnTestEmail_Click(object sender, RoutedEventArgs e)
@@ -148,7 +139,17 @@ namespace GestMail.UI
             TbPathSentBills.Text = directorio.SelectedPath;
         }
 
+        private void LoadHistory()
+        {
+            LvHistorial.ItemsSource = null;
 
+            if (ChkErrorsHistorial.IsChecked != null && ChkErrorsHistorial.IsChecked.Value)
+            {
+                LvHistorial.ItemsSource = Log.GetErrors().DefaultView;
+                return;
+            }
 
+            LvHistorial.ItemsSource = Log.Get().DefaultView;
+        }
     }
 }

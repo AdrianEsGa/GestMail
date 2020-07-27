@@ -53,12 +53,6 @@ namespace GestMail
 
         private void LoadComponentsAndVariables()
         {
-            Modulos.Items.Add("Inicio");
-            Modulos.Items.Add("Clientes");
-            Modulos.Items.Add("Facturas");
-            Modulos.Items.Add("Envios");
-            Modulos.Items.Add("Configuración y historial");
-
             GlobalConfig = new Global();
             GlobalConfig = Repositorio.Read();       
 
@@ -241,34 +235,6 @@ namespace GestMail
 
         }
 
-        private void ListView_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-            var item = (ListViewItem)sender;
-            switch (item.Content.ToString())
-            {
-                case "Inicio":
-                    ContentHolder.Content = new GeneralInfoUi();
-                    break;
-
-                case "Clientes":
-                    ContentHolder.Content = new CustomersManagerUi();
-                    break;
-
-                case "Facturas":
-                    ContentHolder.Content = new BillsManagerUi();
-                    break;
-
-                case "Envios":
-                    ContentHolder.Content = new ShipmentManagerUi();
-                    break;
-
-                case "Configuración y historial":
-                       ContentHolder.Content = new ConfigManagerUi();
-                    break;
-           
-            }
-        }
-
         private void BtnLicense_Click(object sender, RoutedEventArgs e)
         {
             var activateLicense = new LicenseUi();
@@ -289,6 +255,29 @@ namespace GestMail
             }
         }
 
+        private void BtnMain_Click(object sender, RoutedEventArgs e)
+        {
+            ContentHolder.Content = new GeneralInfoUi();
+        }
 
+        private void BtnCustomers_Click(object sender, RoutedEventArgs e)
+        {
+            ContentHolder.Content = new CustomersManagerUi();
+        }
+
+        private void BtnBills_Click(object sender, RoutedEventArgs e)
+        {
+            ContentHolder.Content = new BillsManagerUi();
+        }
+
+        private void BtnShipments_Click(object sender, RoutedEventArgs e)
+        {
+            ContentHolder.Content = new ShipmentManagerUi();
+        }
+
+        private void BtnConfiguration_Click(object sender, RoutedEventArgs e)
+        {
+            ContentHolder.Content = new ConfigManagerUi();
+        }
     }
 }

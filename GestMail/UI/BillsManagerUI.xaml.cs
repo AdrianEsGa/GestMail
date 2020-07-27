@@ -39,7 +39,43 @@ namespace GestMail.UI
                 e.Handled = true;
         }
 
-        private void BtnSearch_MouseDown(object sender, MouseButtonEventArgs e)
+        private void LvFacturas_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            if (LvFacturas.SelectedItem == null) return;
+
+            DataRowView  selectBill = (DataRowView)LvFacturas.SelectedItem;
+            TbSerie.Text = selectBill[0].ToString();
+            TbNumber.Text = selectBill[1].ToString();
+            TbYear.Text = selectBill[2].ToString();
+        }
+
+        private void BtnDelete_Click(object sender, RoutedEventArgs e)
+        {
+            if (TbSerie.Text == string.Empty || TbNumber.Text == string.Empty || TbYear.Text == string.Empty) return;
+
+            Bills deleteBill = new Bills(TbSerie.Text, TbNumber.Text, TbYear.Text);
+
+            if (deleteBill.GetNumber == null)
+            {
+                LblInfo.Content = "La factura " + TbSerie.Text + "/" + TbNumber.Text + "/" + TbYear.Text + " no existe";
+            }
+            else
+            {
+                if (deleteBill.GetSent == "Pendiente")
+                {
+                    _myBillsManager.Delete(deleteBill);
+                    LblInfo.Content = "La factura " + deleteBill.GetSerie + "/" + deleteBill.GetNumber + "/" + deleteBill.GetYear + " se ha eliminado correctamente";
+                }
+                else LblInfo.Content = "No es posible eliminar facturas enviadas";
+            }
+
+            TbSerie.Text = "F";
+            TbNumber.Text = "";
+            TbYear.Text = DateTime.Now.Year.ToString();
+            BtnSearch_Click(sender, null);
+        }
+
+        private void BtnSearch_Click(object sender, RoutedEventArgs e)
         {
             Customers customer = null;
 
@@ -74,42 +110,6 @@ namespace GestMail.UI
 
                 if (bills != null) LvFacturas.ItemsSource = bills.DefaultView;
             }
-        }
-
-        private void LvFacturas_MouseDoubleClick(object sender, MouseButtonEventArgs e)
-        {
-            if (LvFacturas.SelectedItem == null) return;
-
-            DataRowView  selectBill = (DataRowView)LvFacturas.SelectedItem;
-            TbSerie.Text = selectBill[0].ToString();
-            TbNumber.Text = selectBill[1].ToString();
-            TbYear.Text = selectBill[2].ToString();
-        }
-
-        private void BtnDelete_Click(object sender, RoutedEventArgs e)
-        {
-            if (TbSerie.Text == string.Empty || TbNumber.Text == string.Empty || TbYear.Text == string.Empty) return;
-
-            Bills deleteBill = new Bills(TbSerie.Text, TbNumber.Text, TbYear.Text);
-
-            if (deleteBill.GetNumber == null)
-            {
-                LblInfo.Content = "La factura " + TbSerie.Text + "/" + TbNumber.Text + "/" + TbYear.Text + " no existe";
-            }
-            else
-            {
-                if (deleteBill.GetSent == "Pendiente")
-                {
-                    _myBillsManager.Delete(deleteBill);
-                    LblInfo.Content = "La factura " + deleteBill.GetSerie + "/" + deleteBill.GetNumber + "/" + deleteBill.GetYear + " se ha eliminado correctamente";
-                }
-                else LblInfo.Content = "No es posible eliminar facturas enviadas";
-            }
-
-            TbSerie.Text = "F";
-            TbNumber.Text = "";
-            TbYear.Text = DateTime.Now.Year.ToString();
-            BtnSearch_MouseDown(sender, null);
         }
     }
 }
