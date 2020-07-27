@@ -30,7 +30,7 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <Label Content="" Height="28" HorizontalAlignment="Left" Margin="196,183,0,0" Name="LblInfo" VerticalAlignment="Top" Width="290" RenderTransformOrigin="0.517,-0.228" />
+        <Label Content="" Height="28" HorizontalAlignment="Left" Margin="196,183,0,0" Name="LblInfo" VerticalAlignment="Top" Width="578" RenderTransformOrigin="0.517,-0.228" />
 
         <Button Content="Buscar" Height="27" HorizontalAlignment="Left" Margin="504,47,0,0" x:Name="BtnSearch" VerticalAlignment="Top" Width="110" Click="BtnSearch_Click" FontSize="12" />
     </Grid>
