@@ -19,7 +19,7 @@
         <Button Content="Eliminar" Height="27" HorizontalAlignment="Left" Margin="504,113,0,0" Name="BtnDelete" VerticalAlignment="Top" Width="110" Click="BtnDelete_Click" FontSize="12" />
         <Button Content="Guardar" Height="27" HorizontalAlignment="Left" Margin="504,145,0,0" Name="BtnSave" VerticalAlignment="Top" Width="110" Click="BtnSave_Click" FontSize="12" />
         <Button Content="Nuevo" Height="27" HorizontalAlignment="Left" Margin="504,80,0,0" Name="BtnCreate" VerticalAlignment="Top" Width="110" Click="BtnCreate_Click" FontSize="12" />
-        <ListView  Height="211" HorizontalAlignment="Left" Margin="33,212,0,0" Name="LvCustomers" VerticalAlignment="Top" Width="775" MouseDoubleClick="LvCustomers_MouseDoubleClick" FontSize="11">
+        <ListView  Height="268" HorizontalAlignment="Left" Margin="33,212,0,0" Name="LvCustomers" VerticalAlignment="Top" Width="775" MouseDoubleClick="LvCustomers_MouseDoubleClick" FontSize="11">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Width = "100" Header="Codigo"  DisplayMemberBinding="{Binding Path=GetCode}"/>
