@@ -1,0 +1,48 @@
+﻿<UserControl x:Class="GestMail.UI.ShipmentManagerUi"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:controls="http://schemas.microsoft.com/wpf/2008/toolkit"
+             mc:Ignorable="d" 
+              d:DesignHeight="404" d:DesignWidth="820">
+    <Grid Height="386">
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="119,25,0,0" Name="TbCustomerCode" VerticalAlignment="Top" Width="89" MaxLength="6" KeyDown="TbCustomerCode_KeyDown" />
+        
+        
+        <controls:DatePicker Name ="DtPickDateSince"  SelectedDateFormat="Short" Margin="119,63,573,296"></controls:DatePicker>
+
+        <controls:DatePicker Name ="DtPickDateUntil"  SelectedDateFormat="Short" Margin="119,98,573,261"></controls:DatePicker>
+
+
+
+        <Label Content="Fecha desde" Height="28" HorizontalAlignment="Left" Margin="26,62,0,0" Name="LblSinceDate" VerticalAlignment="Top" />
+        <Label Content="hasta" Height="28" HorizontalAlignment="Left" Margin="26,98,0,0" Name="LblUntilDate" VerticalAlignment="Top" />
+        <Label Content="Código cliente" Height="28" HorizontalAlignment="Left" Margin="26,21,0,0" Name="LblCustomerCode" VerticalAlignment="Top" />
+        <CheckBox Content="Pendientes" Height="16" HorizontalAlignment="Left" Margin="36,151,0,0" Name="ChkPending" VerticalAlignment="Top" Checked="ChkPending_Checked" />
+        <CheckBox Content="Enviados" Height="16" HorizontalAlignment="Left" Margin="129,151,0,0" Name="ChkSent" VerticalAlignment="Top" Checked="ChkSent_Checked" />
+        <ListView Height="153" HorizontalAlignment="Left" Margin="382,21,0,0" Name="LvShipping" VerticalAlignment="Top" Width="414" PreviewMouseLeftButtonUp="LvShipping_PreviewMouseLeftButtonUp">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Width="0" Header="IdEnvio"  DisplayMemberBinding="{Binding Path=IdEnvio}"/>
+                    <GridViewColumn Width="0" Header="IdCliente"  DisplayMemberBinding="{Binding Path=IdCliente}"/>
+                    <GridViewColumn Width="220" Header="Cliente"  DisplayMemberBinding="{Binding Path=Nombre}"/>
+                    <GridViewColumn Width="194" Header="Fecha" DisplayMemberBinding="{Binding Path=Fecha,StringFormat=dd/MM/yyyy HH:mm:ss}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <ListView Height="180" HorizontalAlignment="Left" Margin="24,191,0,0" Name="LvShippingBills" VerticalAlignment="Top" Width="770">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Width ="50"  Header="Serie"  DisplayMemberBinding="{Binding Path=Serie}"/>
+                    <GridViewColumn Width ="70" Header="Numero" DisplayMemberBinding="{Binding Path=Numero}"/>
+                    <GridViewColumn Width ="50" Header="Año" DisplayMemberBinding="{Binding Path=Año}"/>
+                    <GridViewColumn Width ="100" Header="Estado" DisplayMemberBinding="{Binding Path=Estado}"/>
+                    <GridViewColumn Width ="200" Header="Fichero" DisplayMemberBinding="{Binding Path=Fichero}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Image Height="51" HorizontalAlignment="Left" Margin="262,123,0,0" Name="BtnSearch" Stretch="Fill" VerticalAlignment="Top" Width="60" Source="/GestMail;component/Images/buscar-buscar-ampliar-icono-6707-96.png" MouseDown="BtnSearch_MouseDown" />
+    </Grid>
+</UserControl>

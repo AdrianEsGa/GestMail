@@ -1,0 +1,44 @@
+﻿<Window x:Class="GestMail.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Gest Mail" Height="554" Width="1000" ResizeMode="CanMinimize" AllowsTransparency="False" AllowDrop="False">
+    <Grid Height="518">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Row="0" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+          
+                <ListView Grid.Row="1" Name="Modulos" BorderThickness="0" FontSize="13" Margin="12,0,-11,0">
+              
+                    <ListBox.ItemContainerStyle>
+                        <Style TargetType="{x:Type ListBoxItem}">
+                        <EventSetter Event="PreviewMouseLeftButtonDown" Handler="ListView_MouseLeftButtonDown" />
+                    </Style>
+                    </ListBox.ItemContainerStyle>
+             
+            </ListView>
+            <Button Content="Licencia" Height="27" Name="BtnLicense" Click="BtnLicense_Click" Margin="17,482,16,6" Grid.Row="1" />
+        </Grid>
+
+        <Separator Grid.Column="1" Margin="7,-5,801,10" Grid.ColumnSpan="2">
+            <Separator.LayoutTransform>
+                <RotateTransform Angle="90" />
+            </Separator.LayoutTransform>
+        </Separator>
+        <ContentControl Grid.Column="2" Name="ContentHolder" Margin="0,88,0,0"></ContentControl>
+        <ProgressBar Grid.Column="2" Height="22" HorizontalAlignment="Left" Margin="119,12,0,0" Name="PgsBarSyncBills" VerticalAlignment="Top" Width="320" />
+        <ProgressBar Height="22" HorizontalAlignment="Left" Margin="119,43,0,0" Name="PgsBarShipments" VerticalAlignment="Top" Width="320" Grid.Column="2" />
+        <Label Content="Facturas sync" Grid.Column="2" Height="28" HorizontalAlignment="Left" Margin="33,10,0,0" Name="LblSyncBills" VerticalAlignment="Top" />
+        <Label Content="Envios" Height="28" HorizontalAlignment="Left" Margin="33,40,0,0" Name="LblShipments" VerticalAlignment="Top" Grid.Column="2" />
+        <Label Height="28" HorizontalAlignment="Left" Margin="445,10,0,0" Name="LblCountSyncBills" VerticalAlignment="Top" Width="66" Grid.Column="2" Content="0/0" />
+        <Label Content="0/0" Height="25" HorizontalAlignment="Left" Margin="445,40,0,0" Name="LblCountSendShipments" VerticalAlignment="Top" Width="66" Grid.Column="2" />
+        <Image Grid.Column="2" Height="44" HorizontalAlignment="Left" Margin="509,12,0,0" Name="BtnSyncBills" Stretch="Fill" VerticalAlignment="Top" Width="53" Source="/GestMail;component/Images/ico-protect-sincronizar.png" MouseDown="BtnSyncBills_MouseDown" />
+    </Grid>
+</Window>

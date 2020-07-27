@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="GestMail.UI.CustomersManagerUi"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="433" d:DesignWidth="820">
+    <Grid Height="432">
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="256,24,0,0" Name="TbCode" VerticalAlignment="Top" Width="73" KeyDown="TbId_KeyDown" IsEnabled="True" MaxLength="6" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="256,54,0,0" Name="TbName" VerticalAlignment="Top" Width="207" MaxLength="50" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="256,84,0,0" Name="TbEmail1" VerticalAlignment="Top" Width="207" MaxLength="40" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="256,113,0,0" Name="TbEmail2" VerticalAlignment="Top" Width="207" MaxLength="40" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="256,141,0,0" Name="TbEmail3" VerticalAlignment="Top" Width="207" MaxLength="40" />
+        <Label Content="Codigo" Height="28" HorizontalAlignment="Left" Margin="196,19,0,0" Name="LblId" VerticalAlignment="Top" />
+        <Label Content="Nombre" Height="28" HorizontalAlignment="Left" Margin="196,49,0,0" Name="LblNombre" VerticalAlignment="Top" />
+        <Label Content="Email 1" Height="28" HorizontalAlignment="Left" Margin="196,79,0,0" Name="LblEmail1" VerticalAlignment="Top" />
+        <Label Content="Email 2" Height="28" HorizontalAlignment="Left" Margin="196,108,0,0" Name="LblEmail2" VerticalAlignment="Top" />
+        <Label Content="Email 3" Height="28" HorizontalAlignment="Left" Margin="196,136,0,0" Name="LblEmail3" VerticalAlignment="Top" />
+        <Button Content="Eliminar" Height="23" HorizontalAlignment="Left" Margin="504,113,0,0" Name="BtnDelete" VerticalAlignment="Top" Width="110" Click="BtnDelete_Click" />
+        <Button Content="Guardar" Height="23" HorizontalAlignment="Left" Margin="504,141,0,0" Name="BtnSave" VerticalAlignment="Top" Width="110" Click="BtnSave_Click" />
+        <Button Content="Nuevo" Height="23" HorizontalAlignment="Left" Margin="504,84,0,0" Name="BtnCreate" VerticalAlignment="Top" Width="110" Click="BtnCreate_Click" />
+        <ListView  Height="180" HorizontalAlignment="Left" Margin="24,212,0,0" Name="LvCustomers" VerticalAlignment="Top" Width="775" MouseDoubleClick="LvCustomers_MouseDoubleClick">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Width = "50" Header="Codigo"  DisplayMemberBinding="{Binding Path=GetCode}"/>
+                    <GridViewColumn Width = "190" Header="Nombre" DisplayMemberBinding="{Binding Path=GetName}"/>
+                    <GridViewColumn Width = "165" Header="Email 1" DisplayMemberBinding="{Binding Path=GetEmails[0]}"/>
+                    <GridViewColumn Width = "165" Header="Email 2" DisplayMemberBinding="{Binding Path=GetEmails[1]}"/>
+                    <GridViewColumn Width = "165" Header="Email 3" DisplayMemberBinding="{Binding Path=GetEmails[2]}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Label Content="" Height="28" HorizontalAlignment="Left" Margin="196,170,0,0" Name="LblInfo" VerticalAlignment="Top" Width="418" />
+        <Image Height="51" HorizontalAlignment="Left" Margin="525,24,0,0" Name="BtnSearch" Source="/GestMail;component/Images/buscar-buscar-ampliar-icono-6707-96.png" Stretch="Fill" VerticalAlignment="Top" Width="60" MouseDown="BtnSearch_MouseDown" />
+    </Grid>
+</UserControl>

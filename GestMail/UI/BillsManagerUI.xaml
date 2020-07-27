@@ -1,0 +1,38 @@
+﻿<UserControl x:Class="GestMail.UI.BillsManagerUi"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+              d:DesignHeight="450" d:DesignWidth="820">
+    <Grid Height="439">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="337*" />
+            <ColumnDefinition Width="483*" />
+        </Grid.ColumnDefinitions>
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="258,33,0,0" Name="TbSerie" VerticalAlignment="Top" Width="45" MaxLength="4" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="309,33,0,0" Name="TbNumber" VerticalAlignment="Top" Width="127" MaxLength="15" Grid.ColumnSpan="2" />
+        <TextBox Height="23" HorizontalAlignment="Right" Margin="0,33,315,0" Name="TbYear" VerticalAlignment="Top" Width="63" KeyDown="TbYear_KeyDown" MaxLength="4" IsEnabled="True" Grid.Column="1" />
+        <Label Content="Factura" Height="28" HorizontalAlignment="Left" Margin="160,29,0,0" Name="LblBill" VerticalAlignment="Top" />
+        <Label Content="Código cliente" Height="28" HorizontalAlignment="Left" Margin="160,66,0,0" Name="LblCustomerCode" VerticalAlignment="Top" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="258,71,0,0" Name="TbCustomerCode" VerticalAlignment="Top" Width="70" MaxLength="6" />
+        <CheckBox Content="Pendientes" Height="16" HorizontalAlignment="Left" Margin="164,127,0,0" Name="ChkPending" VerticalAlignment="Top" Checked="ChkPending_Checked" />
+        <CheckBox Content="Enviadas" Height="16" HorizontalAlignment="Left" Margin="297,127,0,0" Name="ChkSent" VerticalAlignment="Top" Checked="ChkSent_Checked" Grid.ColumnSpan="2" />
+        <ListView Height="180" HorizontalAlignment="Left" Margin="24,212,0,0" Name="LvFacturas" VerticalAlignment="Top" Width="774" Grid.ColumnSpan="2" MouseDoubleClick="LvFacturas_MouseDoubleClick">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Width ="50"  Header="Serie"  DisplayMemberBinding="{Binding Path=Serie}"/>
+                    <GridViewColumn Width ="70" Header="Numero" DisplayMemberBinding="{Binding Path=Numero}"/>
+                    <GridViewColumn Width ="50" Header="Año" DisplayMemberBinding="{Binding Path=Año}"/>
+                    <GridViewColumn Width ="120" Header="Cliente" DisplayMemberBinding="{Binding Path=Nombre}"/>
+                    <GridViewColumn Width ="100" Header="Estado" DisplayMemberBinding="{Binding Path=Estado}"/>
+                    <GridViewColumn Width ="200" Header="Fichero" DisplayMemberBinding="{Binding Path=Fichero}"/>
+                    <GridViewColumn Width ="160" Header="Fecha Importación" DisplayMemberBinding="{Binding Path=FechaImportacion,StringFormat=dd/MM/yyyy HH:mm:ss}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Image Grid.Column="1" Height="51" HorizontalAlignment="Left" Margin="108,93.96,0,0" Name="BtnSearch" Stretch="Fill" VerticalAlignment="Top" Width="60" MouseDown="BtnSearch_MouseDown" Source="/GestMail;component/Images/buscar-buscar-ampliar-icono-6707-96.png" />
+        <Button x:Name="BtnDelete" Content="Eliminar" Grid.Column="1" HorizontalAlignment="Left" Margin="108,149.96,0,0" VerticalAlignment="Top" Width="60" Height="24.96" Click="BtnDelete_Click"/>
+        <Label x:Name="LblInfo" Content="" HorizontalAlignment="Left" Margin="185.886,178.5,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.55,1.079" Grid.ColumnSpan="2" Width="299"/>
+    </Grid>
+</UserControl>

@@ -1,0 +1,12 @@
+﻿<Window x:Class="GestMail.UI.LicenseUi"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Licencia" Height="187" Width="368" ResizeMode="CanMinimize">
+    <Grid Height="150">
+        <Label Content="Activar producto" Height="28" HorizontalAlignment="Left" Margin="29,44,0,0" Name="LblLicense" VerticalAlignment="Top" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="29,71,0,0" Name="TbLicenseKey" VerticalAlignment="Top" Width="284" MaxLength="20" IsReadOnly="False" />
+        <Button Content="Activar" Height="23" HorizontalAlignment="Left" Margin="177,100,0,0" Name="BtnActivate" VerticalAlignment="Top" Width="136" Click="BtnActivate_Click" />
+        <Label Content="" Height="28" HorizontalAlignment="Left" Margin="29,10,0,0" Name="LblLicenseState" VerticalAlignment="Top" Width="284" />
+        <Label Content="AEG@GestMail v.1.0" Height="28" HorizontalAlignment="Left" Margin="3,123,0,0" Name="LblVersionNumber" VerticalAlignment="Top" />
+    </Grid>
+</Window>
