@@ -57,7 +57,7 @@ namespace GestMail.CodeBehind.Util
 
         public bool SendMail(List<string> strMailTo, string subject, List<string> attachments)
         {
-            var mailMsg = new MailMessage {From = _mailFrom};
+            var mailMsg = new MailMessage { From = _mailFrom };
 
             foreach (var mailTo in strMailTo.Where(mailTo => !String.IsNullOrEmpty(mailTo)))
             {
@@ -72,12 +72,12 @@ namespace GestMail.CodeBehind.Util
 
                 else
                 {
-                    Log.Insert( "E",
+                    Log.Insert("E",
                         "La factura " + _rutaFacturas + "\\" + attachment + " no existe. Se ha cancelado el envio");
-                     return false;
-                }             
+                    return false;
+                }
             }
-                 
+
             mailMsg.Subject = subject;
             mailMsg.IsBodyHtml = true;
 
@@ -86,7 +86,16 @@ namespace GestMail.CodeBehind.Util
             mailMsg.Body = sr.ReadToEnd();
 
             ServicePointManager.ServerCertificateValidationCallback = AcceptAllCertifications;
- 
+
+            // Delivery notifications
+            mailMsg.DeliveryNotificationOptions =
+              DeliveryNotificationOptions.OnFailure |
+              DeliveryNotificationOptions.OnSuccess |
+              DeliveryNotificationOptions.Delay;
+
+            // Ask for a read receipt
+            mailMsg.Headers.Add("Disposition-Notification-To", _mailFrom.Address);
+
             try
             {
                 _smtpClient.Send(mailMsg);
@@ -115,6 +124,15 @@ namespace GestMail.CodeBehind.Util
                 mailMsg.Body = sr.ReadToEnd();
 
                 ServicePointManager.ServerCertificateValidationCallback = AcceptAllCertifications;
+
+                // Delivery notifications
+                mailMsg.DeliveryNotificationOptions =
+                  DeliveryNotificationOptions.OnFailure |
+                  DeliveryNotificationOptions.OnSuccess |
+                  DeliveryNotificationOptions.Delay;
+
+                // Ask for a read receipt
+                mailMsg.Headers.Add("Disposition-Notification-To", _mailFrom.Address);
 
                 _smtpClient.Send(mailMsg);
                 return true;

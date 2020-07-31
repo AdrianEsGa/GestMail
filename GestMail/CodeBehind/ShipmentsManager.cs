@@ -100,8 +100,7 @@ namespace GestMail.CodeBehind
             var billNames = new List<string>();
             billNames.AddRange(shipment.GetBills.Select(factura => factura.GetFile));
 
-            if (myMailManager.SendMail(shipment.GetCustomer.GetEmails, Properties.Resources.EMAIL_CUSTOMER_SUBJECT, 
-                billNames))
+            if (myMailManager.SendMail(shipment.GetCustomer.GetEmails, Properties.Resources.EMAIL_CUSTOMER_SUBJECT, billNames))
             {
                 Log.Insert("I",
                     "El envio del cliente " + shipment.GetCustomer.GetCodeAndName + " se ha realizado correctamente");
